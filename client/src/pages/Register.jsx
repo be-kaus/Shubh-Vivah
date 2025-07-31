@@ -199,7 +199,7 @@ const Register = () => {
     <>
       {showConfetti && <Confetti width={width} height={height} />}
 
-      <div className="mt-[-19%] bg-cover flex justify-center relative">
+      <div className="mt-[-16%] bg-cover flex justify-center relative">
         <img src={registerpage} alt="" className="absolute" />
 
         <div className="min-h-screen flex items-center justify-center p-4">
