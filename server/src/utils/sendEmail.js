@@ -4,7 +4,7 @@ const sendEmail = async (to, subject, mailBody) => {
   try {
     console.log(to, subject, mailBody);
 
-    const Truck = nodemailer.createTransport({
+    const bullet = nodemailer.createTransport({
       service: "gmail",
       auth: {
         user: process.env.GMAIL_USER,
@@ -12,7 +12,7 @@ const sendEmail = async (to, subject, mailBody) => {
       },
     });
 
-    console.log("Truck Trayr Ho gya");
+    console.log("bullet Trayr Ho gya");
 
     const mailOptions = {
       from: process.env.GMAIL_USER,
@@ -22,7 +22,7 @@ const sendEmail = async (to, subject, mailBody) => {
     };
     console.log("Saman load Ho gya");
 
-    const result = await Truck.sendMail(mailOptions);
+    const result = await bullet.sendMail(mailOptions);
     console.log("Email Sent Successfully", result.messageId);
     return true;
   } catch (error) {
