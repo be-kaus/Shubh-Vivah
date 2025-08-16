@@ -14,51 +14,55 @@ const BanquetHall = () => {
   return (
     <>
       <div className="px-4 mt-3 flex justify-between">
-        <h2 className="text-2xl font-bold mb-6 text-gray-800">Banquet Halls</h2>
+        <h2 className="text-2xl font-bold mb-6 text-[#8b1f1f] font-serif">
+          Banquet Halls
+        </h2>
         <button
-          className="border rounded px-4 flex gap-3 items-center text-lg border-green-500 bg-green-500 text-white hover:bg-transparent hover:text-green-500"
+          className="border rounded px-4 flex gap-3 items-center text-lg border-[#c49b63] bg-[#c49b63] text-white hover:bg-transparent hover:text-[#c49b63] transition-all duration-300"
           onClick={() => setAddBanquetHallModal(true)}
         >
-          {" "}
           <IoAddCircleOutline /> Add New Hall
         </button>
       </div>
       <div className="m-3">
-        <table className="min-w-full bg-white rounded-lg p-2">
+        <table className="min-w-full bg-[#fffaf5] rounded-lg p-2 shadow-md">
           <thead>
-            <tr className="bg-blue-500 text-white">
-              <th className="py-3 px-4  text-left">Hall Name</th>
-              <th className="py-3 px-4  text-left">Manager Name</th>
-              <th className="py-3 px-4  text-left">Contact Number</th>
-              <th className="py-3 px-4  text-left">Capacity</th>
-              <th className="py-3 px-4  text-left">Rent</th>
-              <th className="py-3 px-4  text-left">Action</th>
+            <tr className="bg-[#8b1f1f] text-white">
+              <th className="py-3 px-4 text-left">Hall Name</th>
+              <th className="py-3 px-4 text-left">Manager Name</th>
+              <th className="py-3 px-4 text-left">Contact Number</th>
+              <th className="py-3 px-4 text-left">Capacity</th>
+              <th className="py-3 px-4 text-left">Rent</th>
+              <th className="py-3 px-4 text-left">Action</th>
             </tr>
           </thead>
           <tbody className="p-4">
             {banquetHalls.length > 0 ? (
               banquetHalls.map((hall, index) => (
-                <tr className="hover:bg-gray-50" key={index}>
-                  <td className="py-2 px-4 ">{hall.hallName}</td>
-                  <td className="py-2 px-4 ">{hall.managerName}</td>
-                  <td className="py-2 px-4 ">{hall.contactNumber}</td>
-                  <td className="py-2 px-4 ">{hall.capacity}</td>
-                  <td className="py-2 px-4 ">₹{hall.rent}</td>
-                  <td className="py-2 px-4  space-x-2">
+                <tr
+                  className="hover:bg-[#fce7d3] transition-all duration-300"
+                  key={index}
+                >
+                  <td className="py-2 px-4">{hall.hallName}</td>
+                  <td className="py-2 px-4">{hall.managerName}</td>
+                  <td className="py-2 px-4">{hall.contactNumber}</td>
+                  <td className="py-2 px-4">{hall.capacity}</td>
+                  <td className="py-2 px-4">₹{hall.rent}</td>
+                  <td className="py-2 px-4 space-x-2">
                     <button
-                      className=" text-blue-400 px-3 py-1 rounded hover:text-blue-600"
+                      className="text-[#8b1f1f] px-3 py-1 rounded hover:text-[#c49b63] transition-all duration-300"
                       onClick={() => setViewBanquetHallModal(true)}
                     >
                       <FaEye />
                     </button>
                     <button
-                      className=" text-yellow-400 px-3 py-1 rounded hover:text-yellow-600"
+                      className="text-[#c49b63] px-3 py-1 rounded hover:text-[#8b1f1f] transition-all duration-300"
                       onClick={() => setEditBanquetHallModal(true)}
                     >
                       <FaEdit />
                     </button>
                     <button
-                      className=" text-red-400 px-3 py-1 rounded hover:text-red-600"
+                      className="text-red-500 px-3 py-1 rounded hover:text-red-700 transition-all duration-300"
                       onClick={() => setDeleteBanquetHallModal(true)}
                     >
                       <FaTrashAlt />
@@ -69,8 +73,11 @@ const BanquetHall = () => {
             ) : (
               <>
                 <tr>
-                  <td colSpan={6} className="text-center p-3 text-red-500">
-                    --No Banquets Halls are available --
+                  <td
+                    colSpan={6}
+                    className="text-center p-3 text-[#8b1f1f] font-medium"
+                  >
+                    -- No Banquet Halls Available --
                   </td>
                 </tr>
               </>
