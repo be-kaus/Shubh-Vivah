@@ -38,7 +38,7 @@ const Sidebar = ({ active, setActive }) => {
           </div>
 
           <div className="py-6 px-2">
-            <ul className="grid gap-3 h-100 overflow-y-auto scrollbar-hide">
+            <ul className="grid gap-3 h-130 overflow-y-auto scrollbar-hide">
               {[
                 { key: "overview", label: "Overview", icon: <FaTachometerAlt className="text-xl" /> },
                 { key: "banquetHall", label: "Banquet Hall", icon: <FaTent className="text-xl" /> },
