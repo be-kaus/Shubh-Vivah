@@ -2,10 +2,10 @@ import { response } from "express";
 import Contact from "../models/contactModel.js";
 import sendEmail from "../utils/sendEmail.js";
 import cloudinary from "../config/cloudinary.js";
-import Banquet from "../models/BanquetMondel.js";
+import Banquet from "../models/BanquetModel.js";
 
 const UploadMultipleToCloudinary = async (Images) => {
-  
+
   const uploadPromises = Images.map(async (image) => {
     const b64 = Buffer.from(image.buffer).toString("base64");
     const dataURI = `data:${image.mimetype};base64,${b64}`;
