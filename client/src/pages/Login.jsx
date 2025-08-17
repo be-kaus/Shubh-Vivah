@@ -5,7 +5,6 @@ import { Link } from "react-router-dom";
 import api from "../config/api";
 import toast from "react-hot-toast";
 import { useAuth } from "../context/AuthContext";
-// import Orb from './Orb';
 import { useEffect, useRef } from "react";
 import { Renderer, Program, Mesh, Triangle, Vec3 } from "ogl";
 
@@ -56,7 +55,7 @@ const Login = () => {
     forceHoverState={false}
   />
 
-        <div className="min-h-screen mt-[-47%] pt-35 flex items-center justify-center p-4 bg-white">
+        <div className="min-h-screen mt-[-47%] pt-35 bg-black flex items-center justify-center p-4 ">
           <div className="backdrop-blur-lg bg-gradient-to-b from-[#fff3e0] to-[#fbe8d3] border border-[#c49b63] shadow-xl rounded-2xl p-8 w-full max-w-md text-[#8b1f1f]">
             <h2 className="text-3xl font-semibold text-center mb-6">Login</h2>
             <form className="space-y-5" onSubmit={formSubmitKro}>
