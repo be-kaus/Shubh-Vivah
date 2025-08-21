@@ -39,9 +39,9 @@ const Register = () => {
         password: "",
       });
 
-      // show confetti for 2 seconds
+      // show confetti for 4 seconds
       setShowConfetti(true);
-      setTimeout(() => setShowConfetti(false), 2000);
+      setTimeout(() => setShowConfetti(false), 4000);
     } catch (error) {
       toast.error(
         `Error : ${error.response?.status || error.message} | ${
