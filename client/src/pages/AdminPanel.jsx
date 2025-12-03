@@ -12,7 +12,7 @@ import CateringService from "../components/Admin/CateringService";
 
 const AdminPannel = () => {
   const navigate = useNavigate();
-  const [active, setActive] = useState("overview");
+  const [active, setActive] = useState("banquetHall");
   const { isLogin, isAdmin } = useAuth();
 
   useEffect(() => {
